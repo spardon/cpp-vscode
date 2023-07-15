@@ -42,5 +42,22 @@
             ],
             "group": "build"
         },
+        {
+            "type": "shell",
+            "label": "Build Project All",
+            "windows": {
+                "command": "${workspaceFolder}/build.bat",
+            },
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$msCompile"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
     ]
 }

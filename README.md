@@ -16,8 +16,8 @@ Boilerplate for building a C++ project using MSVC compiler in VSCode.
 5. Ensure the `VsDevCmd.bat` path in `tasks.json` is valid.
 
 ## build and run
-1. `Ctrl+Shift+B` to build both projects. (project before project-app)
-2. Open `project-app/src/main.cpp` and click run or debug.
+1. `Ctrl+Shift+B` to build both projects.
+2. `F5` to debug or open `project-app/src/main.cpp` and click run/debug.
 
 ## project
 
