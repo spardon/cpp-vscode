@@ -2,10 +2,12 @@
 SetLocal EnableDelayedExpansion
 
 SET projectName=project
+SET includeFlags=/Isrc /Iinclude
+SET libFlags=lib\*.lib
+
+SET sourceDirectory=src
 SET binDirectory=..\bin\%projectName%
 SET intermediateDirectory=..\intermediate\%projectName%
-SET sourceDirectory=src
-SET includeFlags=/Isrc /Iinclude
 
 set "cppFiles="
 for %%A in (%sourceDirectory%"\*.cpp") do (
@@ -33,6 +35,6 @@ ECHO Linking %projectName%
 ECHO Object Files: %objFiles%
 
 lib %objFiles% /OUT:%binDirectory%/%projectName%.lib
-link %objFiles% /DLL /DEBUG:FULL /out:%binDirectory%/%projectName%.dll
+link %objFiles% %libFlags% /DLL /DEBUG:FULL /out:%binDirectory%/%projectName%.dll
 
 exit /b
